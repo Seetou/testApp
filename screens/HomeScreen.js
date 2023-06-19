@@ -1,6 +1,6 @@
 import { StyleSheet, View, Image, Pressable, Text } from "react-native";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.homeContainer}>
@@ -12,7 +12,10 @@ const HomeScreen = () => {
           style={styles.homeImage}
         />
 
-        <Pressable style={styles.homeButtonContainer}>
+        <Pressable
+          style={styles.homeButtonContainer}
+          onPress={() => navigation.navigate("Details")}
+        >
           <View style={styles.homeButton}>
             <Text style={styles.homeButtonText}>get started</Text>
           </View>
